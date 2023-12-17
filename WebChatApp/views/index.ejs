@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Web Sohbet Uygulaması</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <div id="chat-container">
+        <div id="chat-messages">
+            <% messages.forEach(message=> { %>
+                <p><strong>
+                        <%= message.username %>:
+                    </strong>
+                    <%= message.message %> - <small style="opacity: 0.5;"><i>
+                                <%= message.timestamp %>
+                            </i></small>
+                </p>
+                <% }); %>
+        </div>
+        <div id="user-input">
+            <form class="message-form" action="/send-message" method="POST">
+                <input type="text" name="username" placeholder="İsim" autocomplete="off">
+                <input type="text" name="message" placeholder="Mesajınız" autocomplete="off">
+                <button type="submit" class="send-button">Gönder</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var messageSent = false;
+
+            $(document).off('click', '.send-button').on('click', '.send-button', function (e) {
+                e.preventDefault();
+                var formData = $(this).closest('.message-form').serialize();
+                $.post('/send-message', formData, function () {
+                    messageSent = true;
+                    updateChat();
+                });
+            });
+
+            function updateChat() {
+                $.get('/', function (data) {
+                    var $chatMessages = $('#chat-messages');
+                    var $newMessages = $(data).find('#chat-messages');
+
+                    if ($newMessages.html() !== $chatMessages.html()) {
+                        $chatMessages.html($newMessages.html());
+                        $chatMessages.scrollTop($chatMessages[0].scrollHeight);
+                    }
+                });
+            }
+
+            setInterval(function () {
+                $.get('/', function (data) {
+                    updateChat();
+                });
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>
