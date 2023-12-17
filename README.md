@@ -35,5 +35,8 @@ This simple web chat application offers a platform built using EJS (Embedded Jav
 ## 🤝 Contributing
 - You can use [GitHub Issues](link-to-github-issues) to report bugs or make suggestions.
 
+## 📬Contact
+- You can contact me at yigiterensaklar.com.tr to contact me. 
+
 ## 📝 Licence
 - This project is licensed under the MIT licence. For more information, see [LICENSE](LICENSE).
