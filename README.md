@@ -1,38 +1,39 @@
-# 🚀 Web Sohbet Uygulaması: EJS, JS ve CSS İle Geliştirildi
+# 🚀 Web Chat Application: Developed with EJS, JS and CSS
 
-Bu basit web sohbet uygulaması, EJS (Embedded JavaScript), JavaScript ve CSS kullanılarak oluşturulmuş bir platform sunar. Kullanıcılar, kullanıcı dostu arayüz üzerinden kolayca iletişim kurabilir ve anlık sohbetin keyfini çıkarabilirler.
+This simple web chat application offers a platform built using EJS (Embedded JavaScript), JavaScript and CSS. Users can easily communicate and enjoy instant chat through the user-friendly interface.
 
-## 🌟 Özellikler
-- Basit ve anlaşılır bir arayüzle kullanıcılar sohbet odasına katılabilir.
-- Kullanıcılar, isimlerini ve mesajlarını girerek sohbete hızlıca dahil olabilirler.
-- Uygulama, gelişmiş bir web formu aracılığıyla yeni mesajları alır ve sohbet geçmişini tutar.
-- Admin, "admreset" komutunu kullanarak sohbet geçmişini sıfırlama yeteneğine sahiptir.
+## 🌟 Features
+- With a simple and straightforward interface, users can join the chat room.
+- Users can quickly join the chat by entering their name and message.
+- The application receives new messages through an advanced web form and keeps the chat history.
+- Admin has the ability to reset the chat history using the "admreset" command.
 
-## ⚙️ Kurulum
-1. Repoyu klonlayın:
+## ⚙️ Installation
+1. Clone the repo:
    ```bash
    git clone https://github.com/kullaniciadi/WebChatApp.git
    cd WebChatApp
    ```
-2. Gerekli paketleri yükleyin:
+2. Install the necessary packages:
    ```bash
    npm install
    ```
-3. Uygulamayı başlatın:
+3. Start the application:
    ```bash
    node index.js
    ```
-5.```bash 
-   nodemon index.js
+4. or if you are using nodemon:
+   ```bash
+   index.js
    ```
 
-## 🚀 Kullanım
-1. Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresine gidin.
-2. İsim ve mesajınızı girerek sohbete katılın.
-3. Mesaj göndermek için "Gönder" düğmesine tıklayın.
+## 🚀 Usage
+1. Go to [http://localhost:3000](http://localhost:3000) in your browser.
+2. Join the chat by entering your name and message.
+3. Click the "Send" button to send a message.
 
-## 🤝 Katkıda Bulunma
-- Hataları bildirmek veya önerilerde bulunmak için [GitHub Issues](link-to-github-issues) kullanabilirsiniz.
+## 🤝 Contributing
+- You can use [GitHub Issues](link-to-github-issues) to report bugs or make suggestions.
 
-## 📝 Lisans
-Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için [LICENSE](LICENSE) dosyasına göz atın.
+## 📝 Licence
+- This project is licensed under the MIT licence. For more information, see [LICENSE](LICENSE).
