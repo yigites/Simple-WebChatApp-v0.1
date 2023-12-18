@@ -20,7 +20,7 @@ app.post('/send-message', express.urlencoded({ extended: true }), async (req, re
     const { username, message } = req.body;
 
     if (!username || !message || username.trim() === '' || message.trim() === '') {
-        return res.send('<script>alert("Lütfen geçerli bir kullanıcı adı ve mesaj girin."); window.location.href = "/";</script>');
+        return res.send('<script>alert("Please enter a valid username and message."); window.location.href = "/";</script>');
     }
 
     if (username.toLowerCase() === 'admreset') {
