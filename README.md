@@ -11,7 +11,7 @@ This simple web chat application offers a platform built using EJS (Embedded Jav
 ## ⚙️ Installation
 1. Clone the repo:
    ```bash
-   git clone https://github.com/kullaniciadi/WebChatApp.git
+   git clone https://github.com/yigites/WebChatApp.git
    cd WebChatApp
    ```
 2. Install the necessary packages:
